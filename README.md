@@ -1,1 +1,1 @@
-# Reverse-the-number-by-c
+This file have all the codes on c language.
