@@ -1,0 +1,52 @@
+#include <stdio.h>
+int main()
+{
+    int given_year, ref_year, leap_year, totaldays, diff, days;
+    ref_year = 2001;
+    leap_year = 0;
+    printf("Enter the year of which you want to check the first day of\n");
+    scanf("%d", &given_year);
+    diff = given_year - ref_year;
+    while (ref_year < given_year)
+    {
+        if (ref_year % 100 == 0)
+        {
+            if (ref_year % 400 == 0)
+                leap_year++;
+        }
+        else
+        {
+            if (ref_year % 4 == 0)
+                leap_year++;
+        }
+        ref_year++;
+    }
+    totaldays = (diff - leap_year) * 365 + leap_year * 366;
+    days = totaldays % 7;
+    printf("The 1 st day of the year is %d", given_year);
+    switch (days)
+    {
+    case 0:
+        printf("\nIt's Monday\n");
+        break;
+    case 1:
+        printf("\nIt's Tuesday\n");
+        break;
+    case 2:
+        printf("\nIt's Wednesday\n");
+        break;
+    case 3:
+        printf("\nIt's Thursday\n");
+        break;
+    case 4:
+        printf("\nIt's Friday\n");
+        break;
+    case 5:
+        printf("\nIt's Saturday\n");
+        break;
+    case 6:
+        printf("\nIt's Sunday\n");
+        break;
+    }
+    return 0;
+}
