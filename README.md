@@ -1,1 +1,1 @@
-This file have all the codes on c language.
+This repository have some codes of C language.
