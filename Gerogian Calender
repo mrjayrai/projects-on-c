@@ -1,3 +1,4 @@
+//This Code shows the first day of the year the user inputs
 #include <stdio.h>
 int main()
 {
